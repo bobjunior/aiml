@@ -34,7 +34,7 @@ sudo docker run --rm --gpus all nvidia/cuda:11.0-base nvidia-smi
 
 # Start Docker
 ## Docker Image(https://ngc.nvidia.com/catalog/containers/nvidia:tensorflow)
-docker run -p 8888:8888 --gpus all -it -v local_dir:container_dir nvcr.io/nvidia/tensorflow:21.07-tf1-py3
+docker run -p 8888:8888 --gpus all -it -v ~/Docker/:/workspace nvcr.io/nvidia/tensorflow:21.07-tf1-py3
 
 ## Run jupyter notebook
-$jupyter notebook --port=8888 --ip=0.0.0.0 --allow-root --no-browser .
+jupyter notebook --port=8888 --ip=0.0.0.0 --allow-root --no-browser .
